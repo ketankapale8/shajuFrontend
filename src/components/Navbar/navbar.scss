@@ -1,0 +1,204 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    z-index: 99;
+    .navbarTop {
+      display: flex;
+      flex-direction: row;
+      background-color: #6F2323;
+      gap: 20px;
+    //   flex: 0.5;
+      color: whitesmoke;
+      padding-left: 20px;
+      padding-right: 20px;
+      // width: 89%;
+  
+      .top1 {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        flex: 0.2;
+  
+        // .iconImgs {
+        //   width: 18px;
+        //   height: 18px;
+        //   cursor: pointer;
+        //   margin: 10px;
+        // }
+      }
+  
+      .top2 {
+        display: flex;
+        flex: 0.3;
+        flex-direction: row;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        padding-left: 43%;
+        gap: 10px;
+        cursor: pointer;
+  
+        .top2Container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 3px;
+  
+          h5 {
+            font-size: 0.7rem;
+            width: 90px;
+          }
+  
+        //   .iconImgsTop2 {
+        //     width: 18px;
+        //     height: 18px;
+        //     cursor: pointer;
+        //     margin: 12px;
+        //   }
+        }
+      }
+    }
+    // .navbarBottom {
+    //   // height: 80px;
+    //   // display: flex;
+    //   // // flex-direction: column;
+    //   // background-color: #464038;
+    //   // flex: 0.5;
+    //   // padding-left: 20px;
+    //   // padding-right: 20px;
+  
+    //   // .bottomLeft {
+    //   //   display: flex;
+    //   //   flex-direction: row;
+    //   //   align-items: center;
+    //   //   flex: 0.1;
+    //   //   padding-top: 10px;
+    //   //   padding-bottom: 10px;
+  
+    //   //   .brandLogo {
+    //   //     width: 65px;
+    //   //     height: 65px;
+    //   //   }
+    //   // }
+  
+    //   // .bottomRight {
+    //   //   flex: 0.4;
+    //   //   display: inline-flex;
+    //   //   flex-direction: row;
+    //   //   align-items: center;
+  
+    //   //   .bottomNavbar {
+    //   //     .nav-menu {
+    //   //       display: flex;
+    //   //       flex-direction: row;
+    //   //       align-items: center;
+    //   //       justify-content: center;
+    //   //       /* display: grid;
+    //   //       grid-template-columns: repeat(8, auto);
+    //   //       grid-gap: 10px; */
+    //   //       list-style: none;
+    //   //       width: 80vw;
+          
+    //   //       justify-content: end;
+    //   //       margin-right: 1rem;
+  
+    //   //       .nav-item {
+    //   //         display: flex;
+    //   //         align-items: center;
+    //   //         height: 50px;
+  
+    //   //         .nav-links {
+    //   //           // height: 120px;
+    //   //           color: white;
+    //   //           /* color: black; */
+    //   //           text-decoration: none;
+    //   //           padding: 0.5rem 1rem;
+    //   //         }
+  
+    //   //         .nav-links:hover {
+    //   //           color: #b73c1d !important;
+    //   //           border-radius: 4px;
+    //   //           transition: all 0.2s ease-out;
+    //   //         }
+    //   //       }
+    //   //     }
+    //   //   }
+    //   // }
+    // }
+  }
+  
+  // @media screen and (max-width : 600px) { 
+  //   .navbar{
+  //     width: 100%;
+  //     .navbarTop{
+  //       padding-left: 10px;
+  //       padding-right: 10px;
+  
+  //       .top2{
+  //         padding-left: 25%;
+  //       }
+  
+  //       .iconImgs{
+  //         width: 9px;
+  //         height: 9px;
+  //         margin: 5px;
+  //       }
+  //       .iconImgsTop2 {
+  //         width: 9px;
+  //         height: 9px;
+  //         cursor: pointer;
+  //         margin: 6px;
+  //       }
+  //     }
+  
+  //     .navbarBottom{
+  //       height: 45px;
+  //       padding-left: 2px;
+  //     padding-right: 2px;
+  //     flex: 0.5;
+        
+  
+  //         .bottomLeft{
+  //           flex: 0.1;
+  //           // height: 45px;
+  //           .brandLogo{
+  //             width: 25px;
+  //             height: 25px;
+  //           }
+  //         }
+  
+  //         .bottomRight{
+  //           flex: 0.4;
+  //           height: 45px;
+  //           .bottomNavbar{
+  //             height: 45px;
+  //             padding: 0.1px;
+  //             .nav-menu{
+  //               display: flex;
+  //               align-items: center;
+  //               flex-direction: row;
+  //               // margin-right: 1px;
+  //               width: 590px;
+  //               display: flex;
+  //               // padding-left:0.3px !important;
+  //               .nav-item{
+  //                 display: flex;
+  //                 align-items: center;
+  
+  //                 height: 25px;
+  //                 // padding-left:0.3px !important;
+  //               }
+  //               .nav-links{
+                  
+  //                 // margin-left:0.4px !important;
+  //                 font-size: 0.5rem;
+  //                 // padding: 0.2rem 0.5rem;
+  //               }
+  //             }
+  //           }
+  //         }
+  //     }
+  //   }
+    
+  // }
