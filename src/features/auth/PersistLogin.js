@@ -68,7 +68,7 @@ const PersistLogin = () => {
                         {/* <img className="middleImg" src={vectorDesign} alt="design"/> */}
                     <div className='errmsg'  >
                         <h3>
-                            {error.data?.message} to initiate on VJM Portal. 
+                            {error.data?.message} to initiate on Marks Portal. 
 
                         </h3>
                             
