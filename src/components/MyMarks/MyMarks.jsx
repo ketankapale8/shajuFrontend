@@ -8,7 +8,6 @@ import { configureStore } from '@reduxjs/toolkit';
 
 const MyMarks = () => {
   const user = useSelector((state)=> state.auth.user);
-  console.log(user._id)
   let [marksheet , setMarkssheet] = useState([])
   let [getmysheet , setgetmysheet]= useState([])
   let [array,setArray]=useState([]);
@@ -37,7 +36,7 @@ const MyMarks = () => {
         setArray(marksheet?.filter(item=>item?.id == user._id))
     }
 
-    console.log(array)
+
 
 
 

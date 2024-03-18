@@ -17,7 +17,8 @@ function Home() {
   // console.log(user)
   let [array,setArray]=useState([]);
   const [markstotal , setmarksTotal] = useState([])
-  let [inputdata,setInputdata]=useState({SubjectName:"",marks:0 , marks1:0,marks2:0});
+  let [inputdata,setInputdata]=useState({SubjectName:"",marks:0 , marks1:0,marks2:0 ,marks3:0,marks4:0});
+  let [divider , setDivider] = useState(0)
 
   let [isUpdated ,setisUpdated] = useState([])
   let [index,setIndex]=useState()
@@ -44,20 +45,25 @@ function Home() {
 
   function data(e){
       setInputdata({...inputdata,[e.target.name]:e.target.value})
+  
   }
 
 
   function addinputdata(){
+ 
 
       if(SubjectName=="" && marks==""){
           alert("Enter Name and Marks first before submitting ")
       }
       else{
-      setArray([...array,{ SubjectName, marks : (Number(inputdata.marks1) + Number(inputdata.marks2))/20  }])
+   
+      setArray([...array,{ SubjectName, marks : (Number(inputdata.marks1) + Number(inputdata.marks2) + Number(inputdata.marks3) + Number(inputdata.marks4))  / (divider * 10)  }])
       // console.log(inputdata)
       setInputdata({SubjectName:"",marks:0})
   }
   }
+
+  console.log(divider)
 
 
 
@@ -120,9 +126,11 @@ return (
   <div>
         <h3>Welcome ,{user.name}</h3>
           <input type="text" value={inputdata.SubjectName || ""} name='SubjectName' autoComplete='off' placeholder='Add your Subject' onChange={data}  />
-          <input type="number" value={inputdata.marks || ""} name="marks" placeholder='add your marks' disabled onChange={data} />
-          <input type="number" value={inputdata.marks1 || ""} name="marks1" placeholder='add marks betn 1 to 10' min={1} max={10}  onChange={data} />
-          <input type="number" value={inputdata.marks2 || ""} name="marks2" placeholder='add marks betn 1 to 10' min={1} max={10} onChange={data} />
+          {/* <input type="number" value={inputdata.marks || ""} name="marks" placeholder='add your marks' disabled onChange={data} /> */}
+          <input type="number" className='inputMarks' value={inputdata.marks1 || ""} name="marks1" placeholder='add marks betn 1 to 10' min={1} max={10}  onChange={data} onInputCapture={()=>setDivider(1)}/>
+          <input type="number" className='inputMarks' value={inputdata.marks2 || ""} name="marks2" placeholder='add marks betn 1 to 10' min={1} max={10} onChange={data} onInputCapture={()=>setDivider(2)} />
+          <input type="number" className='inputMarks' value={inputdata.marks3 || ""} name="marks3" placeholder='add marks betn 1 to 10' min={1} max={10}  onChange={data} onInputCapture={()=>setDivider(3)}/>
+          <input type="number" className='inputMarks' value={inputdata.marks4 || ""} name="marks4" placeholder='add marks betn 1 to 10' min={1} max={10} onChange={data} onInputCapture={()=>setDivider(4)} />
 
 
 
@@ -134,7 +142,7 @@ return (
               <tbody>
                   <tr>
                       <th>Subject Name</th>
-                      <th>Cumilative/Average Marks</th>
+                      <th>Cumilative/Average Marks out of 10</th>
                       <th>Update Fields</th>
                       <th>Delete Item</th>
                       
