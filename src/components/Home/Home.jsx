@@ -14,10 +14,10 @@ function Home() {
 
 
 
-  console.log(user)
+  // console.log(user)
   let [array,setArray]=useState([]);
   const [markstotal , setmarksTotal] = useState([])
-  let [inputdata,setInputdata]=useState({SubjectName:"",marks:0});
+  let [inputdata,setInputdata]=useState({SubjectName:"",marks:0 , marks1:0,marks2:0});
 
   let [isUpdated ,setisUpdated] = useState([])
   let [index,setIndex]=useState()
@@ -36,7 +36,6 @@ function Home() {
 
   // console.log(marksheet.filter(item=>item.id == user._id).map(item=> item.isUpdated))
 
- console.log(isUpdated)
 
 
 
@@ -50,11 +49,11 @@ function Home() {
 
   function addinputdata(){
 
-      if(SubjectName==="" && marks===""){
-          alert("Enter Name and Roll no ")
+      if(SubjectName=="" && marks==""){
+          alert("Enter Name and Marks first before submitting ")
       }
       else{
-      setArray([...array,{ SubjectName, marks}])
+      setArray([...array,{ SubjectName, marks : (Number(inputdata.marks1) + Number(inputdata.marks2))/20  }])
       // console.log(inputdata)
       setInputdata({SubjectName:"",marks:0})
   }
@@ -115,11 +114,17 @@ const submitData = () => {
     console.log(err)
   }
 }
+
+
 return (
   <div>
-        <h3>Welcome {user.name}</h3>
+        <h3>Welcome ,{user.name}</h3>
           <input type="text" value={inputdata.SubjectName || ""} name='SubjectName' autoComplete='off' placeholder='Add your Subject' onChange={data}  />
-          <input type="number" value={inputdata.marks || ""} name="marks" placeholder='add your marks' onChange={data} />
+          <input type="number" value={inputdata.marks || ""} name="marks" placeholder='add your marks' disabled onChange={data} />
+          <input type="number" value={inputdata.marks1 || ""} name="marks1" placeholder='add marks betn 1 to 10' min={1} max={10}  onChange={data} />
+          <input type="number" value={inputdata.marks2 || ""} name="marks2" placeholder='add marks betn 1 to 10' min={1} max={10} onChange={data} />
+
+
 
           <button onClick={!bolin?addinputdata:updateinfo}>{!bolin?`Add data`:`Update data`}</button>
 
@@ -129,7 +134,7 @@ return (
               <tbody>
                   <tr>
                       <th>Subject Name</th>
-                      <th>Marks</th>
+                      <th>Cumilative/Average Marks</th>
                       <th>Update Fields</th>
                       <th>Delete Item</th>
                       

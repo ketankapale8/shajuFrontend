@@ -94,7 +94,7 @@ function updateinfo(){
 
 const submitData = () => {
   try{
-    axios.put('https://shajubackend.vercel.app/api/v1/marks/updatemarks',{
+    axios.patch('https://shajubackend.vercel.app/api/v1/marks/updatemarks',{
       id: user?._id,
       marksdata : array
     },{
